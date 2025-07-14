@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you!</title>
+  <meta name="description" content="Thank you for accepting! See you at the graduation party." />
+
+  <!-- Si el usuario recarga este documento, lo mandamos de vuelta a index.html -->
+  <script>
+    (function() {
+      const perf = window.performance;
+      const navEntries = perf.getEntriesByType
+        ? perf.getEntriesByType('navigation')
+        : null;
+      const navType = navEntries && navEntries[0]
+        ? navEntries[0].type
+        : perf.navigation
+          ? perf.navigation.type
+          : null;
+
+      // 'reload' en Navigation Timing API o 1 en legacy performance.navigation
+      if (navType === 'reload' || navType === perf.navigation?.TYPE_RELOAD) {
+        window.location.replace('index.html');
+      }
+    })();
+  </script>
+
+  <link rel="icon" href="favicon.ico" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container new-theme thanks-page">
+    <h2 class="thanks-title">I knew you would say yes! Thank you so much!</h2>
+    <img
+      src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif"
+      alt="Special celebration"
+      loading="lazy"
+      width="300"
+      height="200"
+      class="thanks-gif"
+    />
+    <p class="thanks-text">See you at the party! 🥳</p>
+  </main>
+</body>
+</html>
