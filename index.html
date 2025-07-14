@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Will you be my date for the graduation party?</title>
+  <meta name="description" content="Interactive invitation: Will you be my date for the graduation party?">
+  <meta property="og:title"        content="Will you be my date for the graduation party?">
+  <meta property="og:description"  content="Fun interactive invitation for your graduation party.">
+  <meta property="og:image"        content="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif">
+  <meta name="twitter:card"        content="summary_large_image">
+  <link rel="icon" href="favicon.ico">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">Will you be my date for the graduation party?</h1>
+  </header>
+
+  <main class="container new-theme">
+    <section class="buttons" aria-label="Response options">
+      <button id="yesBtn" class="btn yes-btn" aria-label="Accept invitation">Yes</button>
+      <button id="noBtn" class="btn no-btn" aria-label="Decline invitation">No</button>
+    </section>
+
+    <figure class="gif-container">
+      <img
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif"
+        alt="Person celebrating with confetti"
+        loading="lazy"
+        width="300"
+        height="200"
+      >
+    </figure>
+
+    <div id="feedback" class="feedback hidden" aria-live="assertive" tabindex="-1"></div>
+
+    <section id="thanks" class="thanks-section hidden" role="alert">
+      <h2>Thank you!</h2>
+      <img
+        src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif"
+        alt="Special celebration"
+        loading="lazy"
+        width="300"
+        height="200"
+      >
+      <p>See you at the party! 🥳</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>&copy; 2025 hose858. All rights reserved.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
